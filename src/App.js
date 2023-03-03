@@ -10,7 +10,6 @@ function App() {
 
   const handleBaseAmount = (event) => {
     const value = parseInt(event.target.value);
-    console.log(value);
 
     if (value === '' || isNaN(value)) {
       setBaseAmount(0)
