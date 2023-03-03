@@ -10,6 +10,7 @@ function App() {
 
   const handleBaseAmount = (event) => {
     const value = parseInt(event.target.value);
+    console.log(value);
 
     if (value === '' || isNaN(value)) {
       setBaseAmount(0)
@@ -38,15 +39,15 @@ function App() {
 
   return (
     <div className="App home">
-      <h1>Tip Calculator</h1>
+      <h1 className="home__title">Tip Calculator</h1>
       <div className="home__tip-calculator">
-        <div className="home__base-amount">
-          <div>Base Amount:</div>
-          <div>
-            <input type="number" onChange={handleBaseAmount} value={baseAmount} id="baseAmount" name="baseAmount" min={0} max={100} />
-          </div>
+        <div className="category home__base-amount">
+          <p>Base Amount:</p>
+          {/* <div> */}
+          <input className="home__tip-calculator__number-input" type="number" onChange={handleBaseAmount} value={baseAmount} id="baseAmount" name="baseAmount" min={0} max={100} />
+          {/* </div> */}
         </div>
-        <div className="home__tip-calculator__slider">
+        <div className="category home__tip-calculator__slider">
           <input
             type="range"
             min="0"
@@ -55,16 +56,14 @@ function App() {
             className="home__tip-calculator__slider-meter"
             onInput={handleSliderInput}
             id="myRange" />
-          <div className="home__tip-calculator__slider-percentage">Tip percentage: {tipPercentage}%</div>
+          <p className="home__tip-calculator__slider-percentage">Tip percentage: {tipPercentage}%</p>
         </div>
         <hr />
-        <div className="home__tip-calculator__results-tip-amount">
-          <div>Tip Value:</div>
-          <div>$ {tipValue}</div>
+        <div className="category home__tip-calculator__results-tip-amount">
+          <p>Tip Value: $ {tipValue}</p>
         </div>
-        <div className="home__tip-calculator__results-total-bill-with-tip">
-          <div>Total Amout</div>
-          <div>$ {totalAmount}</div>
+        <div className="category home__tip-calculator__results-total-bill-with-tip">
+          <p>Total Amount: $ {totalAmount}</p>
         </div>
       </div>
     </div>

@@ -1,3 +1,9 @@
+hr {
+  border: 1px solid #ccc;
+  border-width: 1px;
+  width: 100%;
+}
+
 .home {
   display: flex;
   flex-flow: column;
@@ -6,18 +12,35 @@
   gap: 3rem;
   height: 100%;
   min-height: 100vh;
+  padding: 0 3rem;
+}
+
+.home__title {
+  margin: 0;
 }
 
 .home__tip-calculator {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   border: 1px solid #ccc;
   padding: 2rem;
   border-radius: 0.75rem;
   display: flex;
   flex-flow: column;
-  gap: 1rem;
+  width: 100%;
+  justify-content: space-around;
+  grid-gap: 6rem;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+
+.home__tip-calculator .category p {
+  margin: 0;
+}
+
+.home__tip-calculator__number-input {
+  border: none;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 2.5rem;
 }
 
 .home__tip-calculator__slider {
@@ -30,8 +53,9 @@
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
-  -webkit-transition: .2s;
   transition: opacity .2s;
+  margin: 0;
+  padding: 0;
 }
 
 .home__tip-calculator__slider-meter:hover {
