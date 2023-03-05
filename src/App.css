@@ -5,21 +5,22 @@ hr {
 }
 
 .home {
-  font-family: 'Dancing Script', cursive;
   display: flex;
   flex-flow: column;
-  gap: 3rem;
+  font-family: Dancing Script, cursive;
+  gap: 1rem;
   padding: 2rem;
+  background: white;
+  color: #00052a;
 }
 
 .home__title {
   margin: 0;
+  text-align: center;
 }
 
 .home__tip-calculator {
-  border: 1px solid #ccc;
   padding: 1rem;
-  border-radius: 0.75rem;
   display: flex;
   flex-flow: column;
   justify-content: space-around;

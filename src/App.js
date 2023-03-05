@@ -9,7 +9,7 @@ function App() {
   const [totalAmount, setTotalAmount] = useState(0);
   const [people, setPeople] = useState(2);
   const [tipPerPerson, setTipPerPerson] = useState(0);
-  const [totalPerPerson, setTotalPerPerson] = useState(0);
+  // const [totalPerPerson, setTotalPerPerson] = useState(0);
 
   const handleBaseAmount = (event) => {
     const value = parseInt(event.target.value);
