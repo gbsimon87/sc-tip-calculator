@@ -67,7 +67,7 @@ function App() {
               className="home__tip-calculator__number-input"
               type="number"
               onChange={handleBaseAmount}
-              value={baseAmount}
+              value={baseAmount === 0 ? "" : baseAmount}
               id="baseAmount"
               name="baseAmount"
               min={0} max={100}
