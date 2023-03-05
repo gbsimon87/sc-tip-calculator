@@ -9,6 +9,7 @@ function App() {
   const [totalAmount, setTotalAmount] = useState(0);
   const [people, setPeople] = useState(2);
   const [tipPerPerson, setTipPerPerson] = useState(0);
+  const [totalPerPerson, setTotalPerPerson] = useState(0);
 
   const handleBaseAmount = (event) => {
     const value = parseInt(event.target.value);
@@ -99,13 +100,13 @@ function App() {
         <hr />
         <div className="home__tip-calculator-results">
           <div className="category home__tip-calculator__results-tip-amount">
-            <p>Tip Value: $ {tipValue}</p>
+            <p>Tip Value: ${tipValue}</p>
           </div>
           <div className="category home__tip-calculator__results-tip-amount">
-            <p>Tip per person: $ {tipPerPerson}</p>
+            <p>Tip per person: ${tipPerPerson}</p>
           </div>
           <div className="category home__tip-calculator__results-total-bill-with-tip">
-            <p>Total Amount: $ {totalAmount}</p>
+            <p>Total Amount: ${totalAmount}</p>
           </div>
         </div>
       </div>
