@@ -83,7 +83,10 @@ function App() {
               className="home__tip-calculator__slider-meter"
               onInput={handleTipSlider}
               id="myRange" />
-            <p className="home__tip-calculator__slider-percentage">Tip percentage: {tipPercentage}%</p>
+            <div>
+              <p className="home__tip-calculator__slider-percentage">Tip percentage:</p>
+              <p>{tipPercentage}%</p>
+            </div>
           </div>
           <div className="category home__tip-calculator__people">
             <input
@@ -94,19 +97,25 @@ function App() {
               className="home__tip-calculator__slider-meter"
               onInput={handlePersonSlider}
               id="peopleSlider" />
-            <p className="home__tip-calculator__slider-percentage">Amount of people: {people}</p>
+            <div>
+              <p className="home__tip-calculator__slider-percentage">Amount of people: </p>
+              <p>{people}</p>
+            </div>
           </div>
         </div>
         <hr />
         <div className="home__tip-calculator-results">
           <div className="category home__tip-calculator__results-tip-amount">
-            <p>Tip Value: ${tipValue}</p>
+            <p>Tip Value: </p>
+            <p>${tipValue}</p>
           </div>
           <div className="category home__tip-calculator__results-tip-amount">
-            <p>Tip per person: ${tipPerPerson}</p>
+            <p>Tip per person:</p>
+            <p>${tipPerPerson}</p>
           </div>
           <div className="category home__tip-calculator__results-total-bill-with-tip">
-            <p>Total Amount: ${totalAmount}</p>
+            <p>Total Amount:</p>
+            <p>${totalAmount}</p>
           </div>
         </div>
       </div>

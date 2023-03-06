@@ -5,13 +5,11 @@ hr {
 }
 
 .home {
+  font-family: 'Courgette', cursive;
   display: flex;
   flex-flow: column;
-  font-family: Dancing Script, cursive;
   gap: 1rem;
   padding: 2rem;
-  background: white;
-  color: #00052a;
 }
 
 .home__title {
@@ -28,10 +26,6 @@ hr {
   font-size: 1.5rem;
 }
 
-.home__tip-calculator .category p {
-  margin: 0;
-}
-
 .category.home__base-amount {
   display: flex;
   justify-content: space-between;
@@ -39,12 +33,22 @@ hr {
 }
 
 .home__tip-calculator__number-input {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
-  border: 1px solid #ccc;
-  width: 4rem;
-  border-radius: 0.25em;
+  border: none;
+  border-bottom: 1px solid #ccc;
   padding: 0.5rem;
+  flex: 3;
+  max-width: 50%;
+}
+
+.home__tip-calculator .category p {
+  margin: 0;
+}
+
+.category>div {
+  display: flex;
+  justify-content: space-between;
 }
 
 .home__tip-calculator__slider {
@@ -93,4 +97,28 @@ hr {
   flex-flow: column;
   justify-content: space-between;
   gap: 2rem;
+}
+
+.home__tip-calculator__results-tip-amount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home__tip-calculator__results-total-bill-with-tip {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+  .home__tip-calculator {
+    gap: 3rem;
+  }
+
+  .home__tip-calculator-settings {
+    gap: 5rem;
+  }
+
+  .home__tip-calculator-results {
+    gap: 5rem;
+  }
 }
