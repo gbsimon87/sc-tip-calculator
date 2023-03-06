@@ -73,7 +73,7 @@ function App() {
 
   return (
     <div className="App home">
-      <h1 className="home__title">Tip Calculator</h1>
+      <h1 className="home__title">Tipster</h1>
       <div className="home__tip-calculator">
         <div className="home__tip-calculator-settings">
           <div className="category home__base-amount">
