@@ -33,8 +33,11 @@ function App() {
 
   const calculateTipPerPerson = () => {
     const tipPerPerson = (tipValue / people).toFixed(2);
-    setTipPerPerson(tipPerPerson);
-    console.log(tipPerPerson);
+    if (tipPerPerson === 'Infinity' || isNaN(tipPerPerson)) {
+      setTipPerPerson(0);
+    } else {
+      setTipPerPerson(tipPerPerson);
+    }
   }
 
   const calculateTotalAmount = () => {
